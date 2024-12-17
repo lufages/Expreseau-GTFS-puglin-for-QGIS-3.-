@@ -9,3 +9,5 @@ Application prévue pour :
 Développé sur QGIS3.+
 
 Documentation utilisateur :
+
+Installation : télécharger le dossier et le zipper (*.zip). Installer l'extension depuis le gestionnaire d'extension de QGIS.
