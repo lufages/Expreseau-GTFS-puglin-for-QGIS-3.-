@@ -12,4 +12,4 @@ Développé sur QGIS3.+
 
 Documentation utilisateur : https://expreseau-gtfs-puglin-for-qgis-3.readthedocs.io/fr/latest
 
-Installation : télécharger le dossier et le zipper (*.zip). Installer l'extension depuis le gestionnaire d'extension de QGIS.
+Installation : télécharger le dossier *expreseau_gtfs_app* et le zipper (*.zip). Installer l'extension depuis le gestionnaire d'extension de QGIS.
