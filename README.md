@@ -1,4 +1,5 @@
-[logo](help/logo2.png)
+![logo](help/logo2.png)
+
 Plugin QGIS pour l'exploitation et l'analyse des fichiers GTFS.
 
 Application prévue pour :
