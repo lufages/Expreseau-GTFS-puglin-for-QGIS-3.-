@@ -10,7 +10,7 @@ project = 'Expreseau for QGIS 3'
 copyright = '2024, Lucas FAGES'
 author = 'Lucas FAGES'
 release = '0.1'
-
+source_encoding = 'utf-8'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
