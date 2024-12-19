@@ -3,14 +3,14 @@ Expreseau GTFS
 ![logo2](logo2.png)
 
 
-Aide Ã  l'utilisation du plugin QGIS 3.* **Expreseau GTFS**
-Plugin pour QGIS basÃ© sur la librairie python expreseau_gtfs : https://github.com/lufages/expreseau_gtfs
+Aide à l'utilisation du plugin QGIS 3.* **Expreseau GTFS**
+Plugin pour QGIS basé sur la librairie python expreseau_gtfs : https://github.com/lufages/expreseau_gtfs
 
 ## Charger un fichier GTFS (dossier *.zip)
 
 Cela va automatiquement modifier la date pour choisir un mardi. 
-Il s'agit du mardi suivant la date minimale enregistrÃ©e dans le fichier *calendar.txt*.
-La plage horaire est choisie par dÃ©faut de 7h Ã  9h.
+Il s'agit du mardi suivant la date minimale enregistrée dans le fichier *calendar.txt*.
+La plage horaire est choisie par défaut de 7h à 9h.
 
 
 
@@ -22,12 +22,12 @@ La plage horaire est choisie par dÃ©faut de 7h Ã  9h.
 
 ## Indicateurs de performance
 
-### Cartographier la frÃ©quence 
-Il est possible de cartographier la frÃ©quence tronÃ§on par tronÃ§on (c'est-Ã -dire arrÃªt Ã  arrÃªt)./
- Le rÃ©sultat est une couche de lignes avec une valeur numÃ©raire Ã  classer. C'est la variable *nbtrips* 
+### Cartographier la fréquence 
+Il est possible de cartographier la fréquence tronÃ§on par tronÃ§on (c'est-à-dire arrêt à arrêt)./
+ Le résultat est une couche de lignes avec une valeur numéraire à classer. C'est la variable *nbtrips* 
  (nombre de voyages sur la plage horaire choisie et dans la direction choisie : direction_id = 0 ou 1)
 
-#### Figure : cartographier la frÃ©quence dans la direction 0
+#### Figure : cartographier la fréquence dans la direction 0
 
 ![isochrones](img/frequency.png)
 
@@ -37,33 +37,33 @@ Il est possible de cartographier la frÃ©quence tronÃ§on par tronÃ§on (c'es
 
 
 
-### Cartographier le rÃ©seau
-Si le fichier *shapes.txt* est prÃ©sent dans le jeu de donnÃ©es GTFS il est possible de cartographier
- chaque ligne du rÃ©seau mais Ã©galement de cartographier la frÃ©quence moyenne par ligne.
+### Cartographier le réseau
+Si le fichier *shapes.txt* est présent dans le jeu de données GTFS il est possible de cartographier
+ chaque ligne du réseau mais également de cartographier la fréquence moyenne par ligne.
  
  
  
-### CrÃ©er une table csv d'indicateurs de performance
-Il est possible de choisir de ne pas calculer certains indicateurs proposÃ©s en les
-dÃ©sÃ©lectionnant dans la checkable combobox.
+### Créer une table csv d'indicateurs de performance
+Il est possible de choisir de ne pas calculer certains indicateurs proposés en les
+désélectionnant dans la checkable combobox.
 
 Liste d'indicateurs :
  - route_short_name : nom court de la ligne
  - direction_id :  direction du trips : 0 ou 1
  - services par jour : nombre de services par jour dans toutes les directions pour la date choisie
- - freq. moy. de 7 Ã  9
- - freq. moy. de 12 Ã  14
- - freq. moy. de 16 Ã  19
- - hmin : heure du premier dÃ©part
- - hmax : heure du dernier dÃ©part
- - amplitude(sec) :  amplitude journaliÃ¨re
- - freq. moy. corrigee - 7 a 9, 12 a 14, 16 a 19 : frÃ©quence pondÃ©rÃ©e par le nombre de voyages par tronÃ§on.
+ - freq. moy. de 7 à 9
+ - freq. moy. de 12 à 14
+ - freq. moy. de 16 à 19
+ - hmin : heure du premier départ
+ - hmax : heure du dernier départ
+ - amplitude(sec) :  amplitude journaliàre
+ - freq. moy. corrigee - 7 a 9, 12 a 14, 16 a 19 : fréquence pondérée par le nombre de voyages par tronÃ§on.
 
 
 ![image2](img/csv_indicators.png)
 
 
-#### RÃ©sultats
+#### Résultats
 
 ![isochrones](img/export_csv.png)
 
@@ -79,24 +79,24 @@ L'evolution est tracee entre 5h et minuit.
 ### Outils issus de la science des graphes :
 
 
-D'aprÃ¨s Cats, Oded. Â« Topological Evolution of a Metropolitan Rail Transport Network: The Case of Stockholm Â».
- Journal of Transport Geography 62 (juin 2017): 172â€‘83. https://doi.org/10.1016/j.jtrangeo.2017.06.002.
+D'apràs Cats, Oded. "Topological Evolution of a Metropolitan Rail Transport Network: The Case of Stockholm".
+ Journal of Transport Geography 62 (juin 2017): https://doi.org/10.1016/j.jtrangeo.2017.06.002.
  
 --Figure : Graph tools**
 
 ![isochrones](img/graph_tools.png)
  
-Les outils ci-dessous crÃ©ent des couches de points qu'il s'agira de faire varier selon les valeurs.
+Les outils ci-dessous créent des couches de points qu'il s'agira de faire varier selon les valeurs.
 Issus de : https://networkx.org/
 
 #### Betweenness centrality
 
-L'indicateur *Betweeness centrality* est, pour un noeud donnÃ©, la fraction de la somme de l'ensemble des itinÃ©raires de toutes les paires de noeuds passant par le noeud.
-La fraction signifie que la valeur est divisÃ©e par le nombre de noeuds du graphe.
+L'indicateur *Betweeness centrality* est, pour un noeud donné, la fraction de la somme de l'ensemble des itinéraires de toutes les paires de noeuds passant par le noeud.
+La fraction signifie que la valeur est divisée par le nombre de noeuds du graphe.
 
-Ci-dessous, l'indicateur calculÃ© Ã  chaque noeud (arrÃªt du rÃ©seau). La valeur varie avec la taille. Les valeurs Ã©levÃ©es permettent de voir quels sont les noeuds les plus empruntÃ©s du rÃ©seau,
-ce qui montre d'une part la desserte du noeud et d'autre part les points de fragilitÃ© du rÃ©seau,
-dans la mesure où un ou plusieurs noeuds successifs prÃ©sentant des valeurs Ã©levÃ©es sont en rÃ©alitÃ© des goulots d'Ã©tranglement.
+Ci-dessous, l'indicateur calculé à chaque noeud (arrêt du réseau). La valeur varie avec la taille. Les valeurs élevées permettent de voir quels sont les noeuds les plus empruntés du réseau,
+ce qui montre d'une part la desserte du noeud et d'autre part les points de fragilité du réseau,
+dans la mesure où un ou plusieurs noeuds successifs présentant des valeurs élevées sont en réalité des goulots d'étranglement.
 
 **Figure : Betweenness centrality**
 
@@ -105,10 +105,10 @@ dans la mesure où un ou plusieurs noeuds successifs prÃ©sentant des valeurs �
 
 #### Closeness centrality
 
-L'indicateur de *Closeness centrality* correspond Ã  pour chacun des noeud du graphe Ã  l'inverse de la somme des temps de parcours vers l'ensemble des noeuds du graphe.
-Plus l'indicateur est Ã©levÃ©, plus la somme des temps pour rejoindre l'ensemble des arrÃªts du rÃ©seau est faible,et cela signifie que le noeud est trÃ¨s bien desservi.
+L'indicateur de *Closeness centrality* correspond à pour chacun des noeud du graphe à l'inverse de la somme des temps de parcours vers l'ensemble des noeuds du graphe.
+Plus l'indicateur est élevé, plus la somme des temps pour rejoindre l'ensemble des arrêts du réseau est faible,et cela signifie que le noeud est tràs bien desservi.
 
-Ci-dessous, l'exemple de Clermont-Ferrand, montre les noeuds et les Â«couloirsÂ« de desserte Ã©levÃ©e.
+Ci-dessous, l'exemple de Clermont-Ferrand, montre les noeuds et les Â«couloirsÂ« de desserte élevée.
 
 **Figure : Closeness centrality**
 
@@ -117,7 +117,7 @@ Ci-dessous, l'exemple de Clermont-Ferrand, montre les noeuds et les Â«couloirs
 #### Degree centrality
 
 
-L'indicateur *Degree centrality*, est, pour un noeud, la fraction de noeuds qui lui est connectÃ©e. Plus le degrÃ© est Ã©levÃ©, plus le noeud est connectÃ© au rÃ©seau.
+L'indicateur *Degree centrality*, est, pour un noeud, la fraction de noeuds qui lui est connectée. Plus le degré est élevé, plus le noeud est connecté au réseau.
 
 
 **Figure : Closeness centrality**
@@ -125,87 +125,87 @@ L'indicateur *Degree centrality*, est, pour un noeud, la fraction de noeuds qui 
 ![deg_centrality](img/deg_centrality.png)
 
 
-## Calcul d'itinÃ©raires sur le rÃ©seau de transports
+## Calcul d'itinéraires sur le réseau de transports
 
-Le calcul d'itinÃ©raire repose sur les algorithmes de calcul du plus court chemin en science des graphes.
-Ici, nous avons adaptÃ© l'algorithme de Dijkstra au calcul d'itinÃ©raire sur un rÃ©seau de transports.
-Les noeuds du graphe sont les arrÃªts du rÃ©seau et les arÃªtes du graphe sont les connexions entre les arrÃªts.
-La pondÃ©ration utilisÃ©e pour l'algorithme Dijsktra est le temps de parcours entre deux arrÃªts, issu des tables horaires.
-On considÃ¨re que le transfer entre deux arrÃªts (correspondance de ligne) se fait Ã  pied, Ã  une vitesse de marche de 4 km.h-1
- et que l'individu peut atteindre les arrÃªts autour de lui dans un rayon Ã  vol d'oiseau, pondÃ©rÃ© par un facteur Â«crow flies distanceÂ«, mais
- il est tout Ã  fait possible de faire varier ces paramÃ¨tres d'entrÃ©e et en particulier l'algorithme :
+Le calcul d'itinéraire repose sur les algorithmes de calcul du plus court chemin en science des graphes.
+Ici, nous avons adapté l'algorithme de Dijkstra au calcul d'itinéraire sur un réseau de transports.
+Les noeuds du graphe sont les arrêts du réseau et les arêtes du graphe sont les connexions entre les arrêts.
+La pondération utilisée pour l'algorithme Dijsktra est le temps de parcours entre deux arrêts, issu des tables horaires.
+On considàre que le transfer entre deux arrêts (correspondance de ligne) se fait à pied, à une vitesse de marche de 4 km.h-1
+et que l'individu peut atteindre les arrêts autour de lui dans un rayon à vol d'oiseau, pondéré par un facteur Â«crow flies distanceÂ«, mais
+il est tout à fait possible de faire varier ces paramàtres d'entrée et en particulier l'algorithme :
 
-  - Dijkstra with max transfer : Dijsktra adaptÃ© avec un nombre de correspondances maximales ;
+  - Dijkstra with max transfer : Dijsktra adapté avec un nombre de correspondances maximales ;
   - Dijkstra classique ;
-  - Plus court chemin sans pondÃ©ration.
+  - Plus court chemin sans pondération.
   
   
-Ã©tapes :
-1. SÃ©lectionner les points (couche point) ou cliquer sur le bouton et sÃ©lectionner la position dans le fond de carte en LAMBERT 93 pour les points de dÃ©part et d'arrivÃ©e ;
-2. ParamÃ¨tres modifiables ;
-3. Cliquer sur "Calcul d'itinÃ©raire". Une fois le calcul terminÃ©, le temps s'affichera et la couche ligne de l'itinÃ©raire sera crÃ©Ã©e.
-On peut distinguer la couche par ligne en catÃ©gorisant la couche par la variable Â«routeÂ«.
+étapes :
+1. Sélectionner les points (couche point) ou cliquer sur le bouton et sélectionner la position dans le fond de carte en LAMBERT 93 pour les points de départ et d'arrivée ;
+2. Paramàtres modifiables ;
+3. Cliquer sur "Calcul d'itinéraire". Une fois le calcul terminé, le temps s'affichera et la couche ligne de l'itinéraire sera créée.
+On peut distinguer la couche par ligne en catégorisant la couche par la variable Â«routeÂ«.
 
 **Exemple**
 ![routing](img/routing.png)
 
-**RÃ©sultats - issus du calculateur d'itinÃ©raires de T2C (RÃ©gie de transports Ã Clermont-Ferrand)** 
+**Résultats - issus du calculateur d'itinéraires de T2C (Régie de transports àClermont-Ferrand)** 
 
 ![res_routing](img/res_routing.png)
 
-**Remarques** :  le calculateur ne permet pas de calculer un trajet Ã un horaire prÃ©cis en donnant des horaires de correspondances prÃ©cis.
+**Remarques** :  le calculateur ne permet pas de calculer un trajet àun horaire précis en donnant des horaires de correspondances précis.
 L'outil permet de calculer le trajet le plus court en temps entre deux points, sur une plage horaire. 
-Il est davantage conçu pour dÃ©terminer une accessibilitÃ© en temps de parcours que pour renvoyer une feuille de route.
+Il est davantage conçu pour déterminer une accessibilité en temps de parcours que pour renvoyer une feuille de route.
 
  
 ## Isochrones
 
-Le calculateur d'isochrones fonctionne sur la base de l'algorithme Dijkstra : il dÃ©termine les arrÃªts atteignables dans le temps imparti.
-A chaque arrÃªt de l'enveloppe concave, on rÃ©cupÃ¨re le temps potentiel de parcours restant
-(c'est-Ã-dire, si le temps de parcours maximal est de 1h, si l'individu met 45min Ã  atteindre un arrÃªt,
+Le calculateur d'isochrones fonctionne sur la base de l'algorithme Dijkstra : il détermine les arrêts atteignables dans le temps imparti.
+A chaque arrêt de l'enveloppe concave, on récupàre le temps potentiel de parcours restant
+(c'est-Ã-dire, si le temps de parcours maximal est de 1h, si l'individu met 45min à atteindre un arrêt,
 le temps potentiel de parcours restant est de 1h - 45min = 15min), et on trace un buffer d'une distance
-correspondant Ã  la distance rÃ©alisable Ã  la vitesse spÃ©cifiÃ©e, le tout pondÃ©rÃ© par un facteur *crow flies distance*.
+correspondant à la distance réalisable à la vitesse spécifiée, le tout pondéré par un facteur *crow flies distance*.
 
 
-**ParamÃ©trage**
+**Paramétrage**
  
-Il est possible d'amender le calcul d'isochrones avec une API de l'IGN qui permet de calculer un isochrone sur la base du rÃ©seau routier ou pÃ©destre français.
+Il est possible d'amender le calcul d'isochrones avec une API de l'IGN qui permet de calculer un isochrone sur la base du réseau routier ou pédestre français.
  
 ![isochrones](img/load_files.png)
 
-**RÃ©sultats**
+**Résultats**
 
 ![res_isochrones](img/isochrones_2.png)
 
  
 
-## Indice d'accessibilitÃ© - *PTAL : Public Transport Accessibility Network*
+## Indice d'accessibilité - *PTAL : Public Transport Accessibility Network*
 
-D'aprÃ¨s : Transports for London. "Assessing transport connectivity in London", 2015. 
+D'apràs : Transports for London. "Assessing transport connectivity in London", 2015. 
 
-Le PTAL est une mesure de l'accessibilitÃ© au rÃ©seau de transports en commun utilisÃ©e par les amÃ©nageurs de l'espace public Ã  Londres.
-Pour chaque Ã©lÃ©ment discret, le PTAL reprÃ©sente comment l'Ã©lÃ©ment est connectÃ© au rÃ©seau de transports.
-Il peut Ãªtre vu comme la mesure de la densitÃ© spatiale de transport public.
-Le PTAL varie de 0 Ã  40 ou plus (elle est ensuite ramenÃ©e de 0 Ã  6). Un Ã©lÃ©ment aura une valeur Ã©levÃ©e si :
-- Il y a une courte distance Ã  pied Ã  rÃ©aliser pour rejoindre des arrÃªts ;
-- Les temps d'attentes aux arrÃªts les plus proches sont faibles ;
-- La desserte Ã  ces arrÃªts est bonne ;
-- Il y a un arrÃªts majeur du rÃ©seau proche ;
-- Une combinaisons des caractÃ©ristiques ci-dessus.
+Le PTAL est une mesure de l'accessibilité au réseau de transports en commun utilisée par les aménageurs de l'espace public à Londres.
+Pour chaque élément discret, le PTAL représente comment l'élément est connecté au réseau de transports.
+Il peut être vu comme la mesure de la densité spatiale de transport public.
+Le PTAL varie de 0 à 40 ou plus (elle est ensuite ramenée de 0 à 6). Un élément aura une valeur élevée si :
+- Il y a une courte distance à pied à réaliser pour rejoindre des arrêts ;
+- Les temps d'attentes aux arrêts les plus proches sont faibles ;
+- La desserte à ces arrêts est bonne ;
+- Il y a un arrêts majeur du réseau proche ;
+- Une combinaisons des caractéristiques ci-dessus.
 
 
     
-Les recommandations d'accessibilitÃ© par les amÃ©nageurs se font selon la densitÃ© de population, c'est ce que montre la figure ci-dessous.
+Les recommandations d'accessibilité par les aménageurs se font selon la densité de population, c'est ce que montre la figure ci-dessous.
 
-**Figure : PTAL vs. densitÃ© de population, d'aprÃ¨s : Transports for London. "Assessing transport connectivity in London", 2015, page 6**
+**Figure : PTAL vs. densité de population, d'apràs : Transports for London. "Assessing transport connectivity in London", 2015, page 6**
 ![ptal](img/res_ptal_reco_density.png)
 
-Le calcul d'accessibilitÃ© via l'indicateur PTAL permet de dÃ©finir un niveau d'accessibilitÃ© partout sur le territoire de l'AOM le jour et la plage horaire choisie.
+Le calcul d'accessibilité via l'indicateur PTAL permet de définir un niveau d'accessibilité partout sur le territoire de l'AOM le jour et la plage horaire choisie.
 
-Il est ensuite possible de choisir la taille des Ã©lÃ©ments de la grille de dÃ©coupage du territoire (voir sur la figure ci-dessous, *element size*).
+Il est ensuite possible de choisir la taille des éléments de la grille de découpage du territoire (voir sur la figure ci-dessous, *element size*).
 
-La grille se construit en prenant l'emprise rectangulaire que forment les arrÃªts (lattitude min et max, longitude min et max). 
-Elle est ensuite dÃ©coupÃ©e en Ã©lÃ©ments carrÃ©s de taille spÃ©cifiÃ©e.
+La grille se construit en prenant l'emprise rectangulaire que forment les arrêts (lattitude min et max, longitude min et max). 
+Elle est ensuite découpée en éléments carrés de taille spécifiée.
 
 
 
@@ -213,11 +213,11 @@ Elle est ensuite dÃ©coupÃ©e en Ã©lÃ©ments carrÃ©s de taille spÃ©cifi
 
 ![ptal](img/ptal_init.png)
 
-**Figure : rÃ©sultats sur le PTU de Clermont-Ferrand**
+**Figure : résultats sur le PTU de Clermont-Ferrand**
 
 ![ptal](img/ptal.png)
 
-Dans notre exemple les valeurs les plus Ã©levÃ©es de PTAL se concentrent dans les zones urbaines les plus denses, autour du rÃ©seau de tramways.
+Dans notre exemple les valeurs les plus élevées de PTAL se concentrent dans les zones urbaines les plus denses, autour du réseau de tramways.
 
 **Figure : que dit la documentation de l'indicateur ?**
 
