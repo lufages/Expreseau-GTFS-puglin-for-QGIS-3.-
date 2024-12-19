@@ -13,7 +13,8 @@ release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
+def setup(app):
+    app.setup_extension('myst_parser')
 
 extensions = [      # Pour générer la documentation à partir des docstrings
     'sphinx.ext.napoleon',       # Pour le support des formats Google et NumPy docstrings
