@@ -151,7 +151,7 @@ On peut distinguer la couche par ligne en catÃ©gorisant la couche par la varia
 
 **RÃ©sultats - issus du calculateur d'itinÃ©raires de T2C (RÃ©gie de transports Ã Clermont-Ferrand)** 
 
-![res_routing](res_routing.png)
+![res_routing](img/res_routing.png)
 
 **Remarques** :  le calculateur ne permet pas de calculer un trajet Ã un horaire prÃ©cis en donnant des horaires de correspondances prÃ©cis.
 L'outil permet de calculer le trajet le plus court en temps entre deux points, sur une plage horaire. 
