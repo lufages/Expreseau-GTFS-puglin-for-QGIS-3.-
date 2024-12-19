@@ -112,7 +112,7 @@ Ci-dessous, l'exemple de Clermont-Ferrand, montre les noeuds et les Â«couloirs
 
 **Figure : Closeness centrality**
 
-![clsn_centr](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/clsn_centr.png)
+![clsn_centr](img/clsn_centr.png)
 
 #### Degree centrality
 
@@ -122,7 +122,7 @@ L'indicateur *Degree centrality*, est, pour un noeud, la fraction de noeuds qui 
 
 **Figure : Closeness centrality**
 
-![deg_centrality](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/deg_centrality.png)
+![deg_centrality](img/deg_centrality.png)
 
 
 ## Calcul d'itinÃ©raires sur le rÃ©seau de transports
