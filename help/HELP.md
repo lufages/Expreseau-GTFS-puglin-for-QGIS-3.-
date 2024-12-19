@@ -16,7 +16,7 @@ La plage horaire est choisie par dÃ©faut de 7h Ã  9h.
 
 #### Figure : Charger un fichier GTFS 
 
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/isochrones.png)
+![isochrones](img/isochrones.png)
 
 
 
@@ -29,11 +29,11 @@ Il est possible de cartographier la frÃ©quence tronÃ§on par tronÃ§on (c'es
 
 #### Figure : cartographier la frÃ©quence dans la direction 0
 
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/frequency.png)
+![isochrones](img/frequency.png)
 
 #### Figure : Classer la variable *nbtrips* par valeur
 
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/load_files.png)
+![isochrones](img/load_files.png)
 
 
 
@@ -60,17 +60,17 @@ Liste d'indicateurs :
  - freq. moy. corrigee - 7 a 9, 12 a 14, 16 a 19 : frÃ©quence pondÃ©rÃ©e par le nombre de voyages par tronÃ§on.
 
 
-![image2](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/csv_indicators.png)
+![image2](img/csv_indicators.png)
 
 
 #### RÃ©sultats
 
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/export_csv.png)
+![isochrones](img/export_csv.png)
 
 
 ## Tracer l'evolution journaliere de la frequence sur le reseau
 
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/plot_evol.png)
+![isochrones](img/plot_evol.png)
 
 Il est possible de choisir des lignes à tracer (point 1. cf. image ci-dessus).
 L'evolution est tracee entre 5h et minuit.
@@ -84,7 +84,7 @@ D'aprÃ¨s Cats, Oded. Â« Topological Evolution of a Metropolitan Rail Transpo
  
 --Figure : Graph tools**
 
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/graph_tools.png)
+![isochrones](img/graph_tools.png)
  
 Les outils ci-dessous crÃ©ent des couches de points qu'il s'agira de faire varier selon les valeurs.
 Issus de : https://networkx.org/
@@ -100,7 +100,7 @@ dans la mesure où un ou plusieurs noeuds successifs prÃ©sentant des valeurs �
 
 **Figure : Betweenness centrality**
 
-![bet_centr](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/bet_centr.png)
+![bet_centr](img/bet_centr.png)
 
 
 #### Closeness centrality
@@ -147,11 +147,11 @@ On considÃ¨re que le transfer entre deux arrÃªts (correspondance de ligne) s
 On peut distinguer la couche par ligne en catÃ©gorisant la couche par la variable Â«routeÂ«.
 
 **Exemple**
-![routing](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/routing.png)
+![routing](img/routing.png)
 
 **RÃ©sultats - issus du calculateur d'itinÃ©raires de T2C (RÃ©gie de transports Ã Clermont-Ferrand)** 
 
-![res_routing](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/res_routing.png)
+![res_routing](res_routing.png)
 
 **Remarques** :  le calculateur ne permet pas de calculer un trajet Ã un horaire prÃ©cis en donnant des horaires de correspondances prÃ©cis.
 L'outil permet de calculer le trajet le plus court en temps entre deux points, sur une plage horaire. 
@@ -171,11 +171,11 @@ correspondant Ã  la distance rÃ©alisable Ã  la vitesse spÃ©cifiÃ©e, le
  
 Il est possible d'amender le calcul d'isochrones avec une API de l'IGN qui permet de calculer un isochrone sur la base du rÃ©seau routier ou pÃ©destre français.
  
-![isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/load_files.png)
+![isochrones](img/load_files.png)
 
 **RÃ©sultats**
 
-![res_isochrones](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/isochrones_2.png)
+![res_isochrones](img/isochrones_2.png)
 
  
 
@@ -198,7 +198,7 @@ Le PTAL varie de 0 Ã  40 ou plus (elle est ensuite ramenÃ©e de 0 Ã  6). Un
 Les recommandations d'accessibilitÃ© par les amÃ©nageurs se font selon la densitÃ© de population, c'est ce que montre la figure ci-dessous.
 
 **Figure : PTAL vs. densitÃ© de population, d'aprÃ¨s : Transports for London. "Assessing transport connectivity in London", 2015, page 6**
-![ptal](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/res_ptal_reco_density.png)
+![ptal](img/res_ptal_reco_density.png)
 
 Le calcul d'accessibilitÃ© via l'indicateur PTAL permet de dÃ©finir un niveau d'accessibilitÃ© partout sur le territoire de l'AOM le jour et la plage horaire choisie.
 
@@ -211,18 +211,18 @@ Elle est ensuite dÃ©coupÃ©e en Ã©lÃ©ments carrÃ©s de taille spÃ©cifi
 
 **Figure : mise en oeuvre de l'indicateur**
 
-![ptal](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/ptal_init.png)
+![ptal](img/ptal_init.png)
 
 **Figure : rÃ©sultats sur le PTU de Clermont-Ferrand**
 
-![ptal](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/ptal.png)
+![ptal](img/ptal.png)
 
 Dans notre exemple les valeurs les plus Ã©levÃ©es de PTAL se concentrent dans les zones urbaines les plus denses, autour du rÃ©seau de tramways.
 
 **Figure : que dit la documentation de l'indicateur ?**
 
 D'après Transports for London. "Assessing transport connectivity in London", 2015, page 19.
-![ptal](C:/Users/Lucas/Documents/10_QGIS/plugins/expreseau_gtfs_app/help/img/res_ptal_values.png)
+![ptal](img/res_ptal_values.png)
 
  
  
