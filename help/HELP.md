@@ -1,6 +1,6 @@
 Expreseau GTFS
 
-![logo2](help/logo2.png)
+![logo2](logo2.png)
 
 
 Aide Ã  l'utilisation du plugin QGIS 3.* **Expreseau GTFS**
